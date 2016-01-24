@@ -1,0 +1,6 @@
+E:\AuScGen\bin\Config\AuScGenLog.config
+E:\AuScGen\bin\AuScGen.PDFOperation.dll
+E:\AuScGen\bin\AuScGen.PDFOperation.pdb
+E:\AuScGen\AuScGen.PDFOperation\obj\Debug\AuScGen.PDFOperation.csprojResolveAssemblyReference.cache
+E:\AuScGen\AuScGen.PDFOperation\obj\Debug\AuScGen.PDFOperation.dll
+E:\AuScGen\AuScGen.PDFOperation\obj\Debug\AuScGen.PDFOperation.pdb

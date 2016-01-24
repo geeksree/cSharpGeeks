@@ -1,0 +1,78 @@
+2015-12-18 01:33:00,851 Framework.ComponentContainer (Logging from Framework Class) [DEBUG]- Inside Framework Constructor!
+2015-12-18 01:33:04,988 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside WebDriverPlugin Constructor!
+2015-12-18 01:33:05,003 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.DataAccess
+2015-12-18 01:33:05,003 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.ExcelReader
+2015-12-18 01:33:05,003 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.HttpRestClient
+2015-12-18 01:33:05,003 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.MouseKeyBoardSimulator
+2015-12-18 01:33:05,003 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- UIAccess.WebDriverPlugin
+2015-12-18 01:33:24,425 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside WebDriverPlugin Constructor!
+2015-12-18 01:33:24,425 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.DataAccess
+2015-12-18 01:33:24,425 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.ExcelReader
+2015-12-18 01:33:24,426 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.HttpRestClient
+2015-12-18 01:33:24,426 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.MouseKeyBoardSimulator
+2015-12-18 01:33:24,426 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- UIAccess.WebDriverPlugin
+2015-12-18 01:33:24,761 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside WebDriverPlugin Constructor!
+2015-12-18 01:33:24,761 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.DataAccess
+2015-12-18 01:33:24,762 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.ExcelReader
+2015-12-18 01:33:24,762 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.HttpRestClient
+2015-12-18 01:33:24,763 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.MouseKeyBoardSimulator
+2015-12-18 01:33:24,763 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- UIAccess.WebDriverPlugin
+2015-12-18 01:33:24,773 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside GetControl<T> Method
+2015-12-18 01:33:24,775 UIAccess.GlobalGuiCollection (Logging from WebDriverPlugin Class) [DEBUG]- Checking for CommonControls Object Collection
+2015-12-18 01:33:24,781 UIAccess.GlobalGuiCollection (Logging from WebDriverPlugin Class) [DEBUG]- Successfully Created CommonControls Object Collection!
+2015-12-18 01:33:24,789 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside ExtractObjectLocator
+2015-12-18 01:33:24,789 UIAccess.GlobalGuiCollection ((null)) [INFO]- Unused guimaps collected, number of guimaps present now:1
+2015-12-18 01:33:24,790 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- ExtractObjectLocator, xpath=//*[@id='SiteNav']
+2015-12-18 01:33:31,399 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside WaitForControl , returned control in 0ms
+2015-12-18 01:38:00,536 Framework.ComponentContainer (Logging from Framework Class) [DEBUG]- Inside Framework Constructor!
+2015-12-18 01:38:03,716 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside WebDriverPlugin Constructor!
+2015-12-18 01:38:03,731 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.DataAccess
+2015-12-18 01:38:03,731 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.ExcelReader
+2015-12-18 01:38:03,731 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.HttpRestClient
+2015-12-18 01:38:03,731 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.MouseKeyBoardSimulator
+2015-12-18 01:38:03,731 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- UIAccess.WebDriverPlugin
+2015-12-18 01:38:19,509 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside WebDriverPlugin Constructor!
+2015-12-18 01:38:19,514 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.DataAccess
+2015-12-18 01:38:19,516 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.ExcelReader
+2015-12-18 01:38:19,518 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.HttpRestClient
+2015-12-18 01:38:19,520 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.MouseKeyBoardSimulator
+2015-12-18 01:38:19,521 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- UIAccess.WebDriverPlugin
+2015-12-18 01:38:20,052 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside WebDriverPlugin Constructor!
+2015-12-18 01:38:20,061 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.DataAccess
+2015-12-18 01:38:20,063 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.ExcelReader
+2015-12-18 01:38:20,064 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.HttpRestClient
+2015-12-18 01:38:20,070 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.MouseKeyBoardSimulator
+2015-12-18 01:38:20,075 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- UIAccess.WebDriverPlugin
+2015-12-18 01:38:20,094 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside GetControl<T> Method
+2015-12-18 01:38:20,097 UIAccess.GlobalGuiCollection (Logging from WebDriverPlugin Class) [DEBUG]- Checking for CommonControls Object Collection
+2015-12-18 01:38:20,110 UIAccess.GlobalGuiCollection (Logging from WebDriverPlugin Class) [DEBUG]- Successfully Created CommonControls Object Collection!
+2015-12-18 01:38:20,165 UIAccess.GlobalGuiCollection ((null)) [INFO]- Unused guimaps collected, number of guimaps present now:1
+2015-12-18 01:38:20,170 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside ExtractObjectLocator
+2015-12-18 01:38:20,181 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- ExtractObjectLocator, xpath=//*[@id='SiteNav']
+2015-12-18 01:38:23,906 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside WaitForControl , returned control in 0ms
+2015-12-18 01:41:12,700 Framework.ComponentContainer (Logging from Framework Class) [DEBUG]- Inside Framework Constructor!
+2015-12-18 01:41:15,862 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside WebDriverPlugin Constructor!
+2015-12-18 01:41:15,862 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.DataAccess
+2015-12-18 01:41:15,878 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.ExcelReader
+2015-12-18 01:41:15,878 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.HttpRestClient
+2015-12-18 01:41:15,878 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.MouseKeyBoardSimulator
+2015-12-18 01:41:15,878 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- UIAccess.WebDriverPlugin
+2015-12-18 01:41:28,710 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside WebDriverPlugin Constructor!
+2015-12-18 01:41:28,715 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.DataAccess
+2015-12-18 01:41:28,716 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.ExcelReader
+2015-12-18 01:41:28,718 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.HttpRestClient
+2015-12-18 01:41:28,720 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.MouseKeyBoardSimulator
+2015-12-18 01:41:28,722 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- UIAccess.WebDriverPlugin
+2015-12-18 01:41:29,304 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside WebDriverPlugin Constructor!
+2015-12-18 01:41:29,309 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.DataAccess
+2015-12-18 01:41:29,317 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.ExcelReader
+2015-12-18 01:41:29,323 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.HttpRestClient
+2015-12-18 01:41:29,362 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- AuScGen.CommonUtilityPlugin.MouseKeyBoardSimulator
+2015-12-18 01:41:29,369 Framework.ComponentContainer (Logging from WebDriverPlugin Class) [INFO]- UIAccess.WebDriverPlugin
+2015-12-18 01:41:29,385 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside GetControl<T> Method
+2015-12-18 01:41:29,392 UIAccess.GlobalGuiCollection (Logging from WebDriverPlugin Class) [DEBUG]- Checking for CommonControls Object Collection
+2015-12-18 01:41:29,399 UIAccess.GlobalGuiCollection (Logging from WebDriverPlugin Class) [DEBUG]- Successfully Created CommonControls Object Collection!
+2015-12-18 01:41:29,414 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside ExtractObjectLocator
+2015-12-18 01:41:29,414 UIAccess.GlobalGuiCollection ((null)) [INFO]- Unused guimaps collected, number of guimaps present now:1
+2015-12-18 01:41:29,415 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- ExtractObjectLocator, xpath=//*[@id='SiteNav']
+2015-12-18 01:41:31,540 UIAccess.WebDriverPlugin (Logging from WebDriverPlugin Class) [DEBUG]- Inside WaitForControl , returned control in 0ms

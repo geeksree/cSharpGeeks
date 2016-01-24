@@ -1,0 +1,6 @@
+E:\AuScGen\bin\Config\AuScGenLog.config
+E:\AuScGen\bin\Framework.dll
+E:\AuScGen\bin\Framework.pdb
+E:\AuScGen\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache
+E:\AuScGen\Framework\obj\Debug\Framework.dll
+E:\AuScGen\Framework\obj\Debug\Framework.pdb

@@ -1,0 +1,7 @@
+E:\AuScGen\bin\Config\AuScGenLog.config
+E:\AuScGen\bin\Config\TelerikPluginLog.config
+E:\AuScGen\bin\AuScGen.TelerikPlugin.dll
+E:\AuScGen\bin\AuScGen.TelerikPlugin.pdb
+E:\AuScGen\AuScGen.TelerikPlugin\obj\Debug\AuScGen.TelerikPlugin.csprojResolveAssemblyReference.cache
+E:\AuScGen\AuScGen.TelerikPlugin\obj\Debug\AuScGen.TelerikPlugin.dll
+E:\AuScGen\AuScGen.TelerikPlugin\obj\Debug\AuScGen.TelerikPlugin.pdb

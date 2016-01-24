@@ -1,0 +1,13 @@
+E:\AuScGen\bin\Config\AuScGenLog.config
+E:\AuScGen\bin\Guimaps\AccntBalancePage.xml
+E:\AuScGen\bin\Guimaps\CommonControls.xml
+E:\AuScGen\bin\Guimaps\LandingPage.xml
+E:\AuScGen\bin\Guimaps\LoginPage.xml
+E:\AuScGen\bin\Config\TelerikPluginLog.config
+E:\AuScGen\bin\Config\ExcludedTest.xml
+E:\AuScGen\bin\Config\TestSettings.xml
+E:\AuScGen\bin\AuScGen.FunctionalTest.dll
+E:\AuScGen\bin\AuScGen.FunctionalTest.pdb
+E:\AuScGen\AuScGen.FunctionalTest\obj\Debug\AuScGen.FunctionalTest.csprojResolveAssemblyReference.cache
+E:\AuScGen\AuScGen.FunctionalTest\obj\Debug\AuScGen.FunctionalTest.dll
+E:\AuScGen\AuScGen.FunctionalTest\obj\Debug\AuScGen.FunctionalTest.pdb

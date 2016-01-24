@@ -1,0 +1,6 @@
+E:\AuScGen\bin\TestReportCreation.exe.config
+E:\AuScGen\bin\TestReportCreation.exe
+E:\AuScGen\bin\TestReportCreation.pdb
+E:\AuScGen\TestReportCreation\obj\Debug\TestReportCreation.exe
+E:\AuScGen\TestReportCreation\obj\Debug\TestReportCreation.pdb
+E:\AuScGen\TestReportCreation\obj\Debug\TestReportCreation.csprojResolveAssemblyReference.cache
