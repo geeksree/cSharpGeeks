@@ -1,5 +1,0 @@
-E:\AuScGen\bin\WhiteFramework.dll
-E:\AuScGen\bin\WhiteFramework.pdb
-E:\AuScGen\AuScGen.WhitePlugin\obj\Debug\AuScGen.WhiteFramework.csprojResolveAssemblyReference.cache
-E:\AuScGen\AuScGen.WhitePlugin\obj\Debug\WhiteFramework.dll
-E:\AuScGen\AuScGen.WhitePlugin\obj\Debug\WhiteFramework.pdb

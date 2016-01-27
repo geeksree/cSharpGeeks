@@ -1,6 +1,0 @@
-E:\AuScGen\bin\Config\AuScGenLog.config
-E:\AuScGen\bin\AuScGen.Imaging.dll
-E:\AuScGen\bin\AuScGen.Imaging.pdb
-E:\AuScGen\AuScGen.Imaging\obj\Debug\AuScGen.Imaging.csprojResolveAssemblyReference.cache
-E:\AuScGen\AuScGen.Imaging\obj\Debug\AuScGen.Imaging.dll
-E:\AuScGen\AuScGen.Imaging\obj\Debug\AuScGen.Imaging.pdb

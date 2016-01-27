@@ -1,6 +1,0 @@
-E:\AuScGen\bin\Config\AuScGenLog.config
-E:\AuScGen\bin\UIAccess.dll
-E:\AuScGen\bin\UIAccess.pdb
-E:\AuScGen\UIAccess\obj\Debug\UIAccess.csprojResolveAssemblyReference.cache
-E:\AuScGen\UIAccess\obj\Debug\UIAccess.dll
-E:\AuScGen\UIAccess\obj\Debug\UIAccess.pdb

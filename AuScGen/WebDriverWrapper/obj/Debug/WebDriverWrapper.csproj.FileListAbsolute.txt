@@ -1,8 +1,0 @@
-E:\AuScGen\bin\Drivers\chromedriver.exe
-E:\AuScGen\bin\Drivers\IEDriverServer.exe
-E:\AuScGen\bin\Drivers\webdriver.xpi
-E:\AuScGen\bin\WebDriverWrapper.dll
-E:\AuScGen\bin\WebDriverWrapper.pdb
-E:\AuScGen\WebDriverWrapper\obj\Debug\WebDriverWrapper.csprojResolveAssemblyReference.cache
-E:\AuScGen\WebDriverWrapper\obj\Debug\WebDriverWrapper.dll
-E:\AuScGen\WebDriverWrapper\obj\Debug\WebDriverWrapper.pdb

@@ -1,6 +1,0 @@
-E:\AuScGen\bin\Config\AuScGenLog.config
-E:\AuScGen\bin\AuScGen.CommonUtilityPlugin.dll
-E:\AuScGen\bin\AuScGen.CommonUtilityPlugin.pdb
-E:\AuScGen\AuScGen.CommonUtilityPlugin\obj\Debug\AuScGen.CommonUtilityPlugin.csprojResolveAssemblyReference.cache
-E:\AuScGen\AuScGen.CommonUtilityPlugin\obj\Debug\AuScGen.CommonUtilityPlugin.dll
-E:\AuScGen\AuScGen.CommonUtilityPlugin\obj\Debug\AuScGen.CommonUtilityPlugin.pdb
