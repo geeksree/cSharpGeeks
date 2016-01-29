@@ -15,7 +15,6 @@ namespace UIAccess.WebControls
 
         internal IControl Control;
 
-        //private Browser myBrowser;
 
         //private LocatorType myLocatorType;
 
