@@ -1,5 +1,0 @@
-D:\AuScGen\AuScGen.WhitePlugin\Tools\UIAVerify_v2.0\bin\IQueryString.dll
-D:\AuScGen\AuScGen.WhitePlugin\Tools\UIAVerify_v2.0\bin\IQueryString.pdb
-D:\AuScGen\AuScGen.WhitePlugin\Tools\UIAVerify_v2.0\IQueryString\obj\Release\IQueryString.csprojResolveAssemblyReference.cache
-D:\AuScGen\AuScGen.WhitePlugin\Tools\UIAVerify_v2.0\IQueryString\obj\Release\IQueryString.dll
-D:\AuScGen\AuScGen.WhitePlugin\Tools\UIAVerify_v2.0\IQueryString\obj\Release\IQueryString.pdb
