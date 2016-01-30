@@ -1,0 +1,20 @@
+<ObjectRepository>
+<FeatureSet name='LoginPage'>
+	<Element type='Textbox' name='TxtUserName'>
+		<id>username</id>
+		<PageTitle>Salesforce.com - Salesforce.com</PageTitle>
+	</Element>
+	<Element type='Textbox' name='TxtPassword'>
+		<id>password</id>
+		<PageTitle>Salesforce.com - Salesforce.com</PageTitle>
+	</Element>
+	<Element type='Button' name='BtnLogin'>
+		<id>Login</id>
+		<PageTitle>Salesforce.com - Salesforce.com</PageTitle>
+	</Element>
+  <Element type='' name='ITChoice'>
+    <id>it-choice</id>
+    <PageTitle>UMPS JS frame</PageTitle>
+  </Element>
+</FeatureSet>
+</ObjectRepository>
