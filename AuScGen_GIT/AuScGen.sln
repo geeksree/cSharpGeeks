@@ -102,6 +102,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDMC.Test", "EDMC.Test\EDMC.Test.csproj", "{5E95CEAE-9D9B-40EF-948A-FDF854740286}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{2F53D1F7-77AF-4B8A-A57A-84C6551A93D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -288,6 +290,14 @@ Global
 		{5E95CEAE-9D9B-40EF-948A-FDF854740286}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5E95CEAE-9D9B-40EF-948A-FDF854740286}.Release|x64.ActiveCfg = Release|Any CPU
 		{5E95CEAE-9D9B-40EF-948A-FDF854740286}.Release|x86.ActiveCfg = Release|Any CPU
+		{2F53D1F7-77AF-4B8A-A57A-84C6551A93D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F53D1F7-77AF-4B8A-A57A-84C6551A93D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F53D1F7-77AF-4B8A-A57A-84C6551A93D0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2F53D1F7-77AF-4B8A-A57A-84C6551A93D0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2F53D1F7-77AF-4B8A-A57A-84C6551A93D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F53D1F7-77AF-4B8A-A57A-84C6551A93D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F53D1F7-77AF-4B8A-A57A-84C6551A93D0}.Release|x64.ActiveCfg = Release|Any CPU
+		{2F53D1F7-77AF-4B8A-A57A-84C6551A93D0}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
