@@ -13,6 +13,7 @@ using OpenQA.Selenium.Remote;
 using System.Drawing;
 using System.IO;
 using System.Net.Sockets;
+using System.Collections.ObjectModel;
 
 namespace WebDriverWrapper
 {
@@ -36,15 +37,32 @@ namespace WebDriverWrapper
         {
             get
             {
+                //string downloadDir = string.Format(@"{0}\DownloadedFiles",Directory.GetCurrentDirectory());
+
+                if (!Directory.Exists(DownloadDirectory))
+                {
+                    Directory.CreateDirectory(DownloadDirectory);
+                }
+
+                FirefoxProfile firefoxProfile = new FirefoxProfile();
+                firefoxProfile.SetPreference("browser.download.folderList", 2);
+                firefoxProfile.SetPreference("browser.download.dir", DownloadDirectory);
+                //firefoxProfile.SetPreference("browser.helperApps.alwaysAsk.force", false); 
+
+                firefoxProfile.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/pdf");
+                firefoxProfile.SetPreference("browser.helperApps.alwaysAsk.force", false);
+                firefoxProfile.SetPreference("pdfjs.disabled", true);
+                firefoxProfile.SetPreference("plugin.scan.plid.all", false);
+
                 if (null == BinaryPath)
                 {
                     Console.WriteLine("null binary path");
-                    return new FirefoxDriver();
+                    return new FirefoxDriver(firefoxProfile);
                 }
                 else
                 {
                     Console.WriteLine(BinaryPath);
-                    return new FirefoxDriver(new FirefoxBinary(BinaryPath), new FirefoxProfile(), TimeSpan.FromHours(2));
+                    return new FirefoxDriver(new FirefoxBinary(BinaryPath), firefoxProfile, TimeSpan.FromHours(2));
                 }
 
             }
@@ -133,6 +151,14 @@ namespace WebDriverWrapper
             GetBrowser(aBrowserType);
         }
 
+        public Browser(BrowserType aBrowserType, string binaryPath, string downloadDirectory)
+        {
+            BinaryPath = binaryPath;
+            DownloadDirectory = downloadDirectory;
+            GetBrowser(aBrowserType);
+
+        }
+
         #endregion ctor
 
         #region Public Properties
@@ -163,10 +189,19 @@ namespace WebDriverWrapper
 
         }
 
+        public ReadOnlyCollection<string> WindowHandles
+        {
+            get
+            {
+                return BrowserHandle.WindowHandles;
+            }
+        }
+
 
 
         public Process NativeSeleniumProcess { get; private set; }
         public int Port { get; private set; }
+        public string DownloadDirectory { get; set; }
 
         #endregion Public Properties
 
