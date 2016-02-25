@@ -17,5 +17,7 @@ namespace WebDriverWrapper.IControlHierarchy
         void DeselectByIndex(int index);
         void DeselectByText(string text);
         void DeselectByValue(string value);
+        void SelectByIndex(int index, int maxTimeout);
+        void SelectByText(string text, int maxTimeout);
     }
 }

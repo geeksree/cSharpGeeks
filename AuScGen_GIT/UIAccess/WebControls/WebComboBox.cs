@@ -33,9 +33,19 @@ namespace UIAccess.WebControls
             ComboBox.SelectByText(textOption);
         }
 
+        public void SelectByText(string textOption, int timeOut)
+        {
+            ComboBox.SelectByText(textOption, timeOut);
+        }
+
         public void SelectByIndex(int index)
         {
             ComboBox.SelectByIndex(index);
+        }
+
+        public void SelectByIndex(int index, int timeOut)
+        {
+            ComboBox.SelectByIndex(index, timeOut);
         }
 
         public void SelectByValue(string value)
@@ -55,12 +65,40 @@ namespace UIAccess.WebControls
 
         public void DeselectByText(string text)
         {
-           ComboBox.DeselectByText(text);
+            ComboBox.DeselectByText(text);
         }
 
         public void DeselectByValue(string value)
         {
             ComboBox.DeselectByValue(value);
+        }
+
+        public void NativeSelect(string text, string childrenXpath, int timeOut)
+        {
+            ComboBox.Click();
+
+            var test = ComboBox.WaitForChildren(childrenXpath, timeOut);
+
+            foreach (IControl option in ComboBox.WaitForChildren(childrenXpath, timeOut))
+            {
+                if (!option.Text.Equals(text))
+                {
+                    ComboBox.SendKeys(WebDriverWrapper.Keys.KeyDown);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            if (childrenXpath.Contains("optgroup"))
+            {
+                ComboBox.SendKeys(WebDriverWrapper.Keys.KeyDown);
+                ComboBox.SendKeys(WebDriverWrapper.Keys.Enter);
+            }
+            else
+            {
+                ComboBox.SendKeys(WebDriverWrapper.Keys.Enter);
+            }
         }
     }
 }
