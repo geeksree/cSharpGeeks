@@ -12,6 +12,7 @@ using Selenium;
 using OpenQA.Selenium.Remote;
 using System.Drawing;
 using System.IO;
+using System.Net.Sockets;
 
 namespace WebDriverWrapper
 {
@@ -21,19 +22,21 @@ namespace WebDriverWrapper
 
         IE,
 
-        Chrome
+        Chrome,
 
-    }   
-    
+        HTMLUnit
+
+    }
+
     public class Browser
     {
         #region Drivers
 
-        private IWebDriver FirefoxDriver 
-        { 
+        private IWebDriver FirefoxDriver
+        {
             get
             {
-                if(null == BinaryPath)
+                if (null == BinaryPath)
                 {
                     Console.WriteLine("null binary path");
                     return new FirefoxDriver();
@@ -41,18 +44,18 @@ namespace WebDriverWrapper
                 else
                 {
                     Console.WriteLine(BinaryPath);
-                    return new FirefoxDriver(new FirefoxBinary(BinaryPath), new FirefoxProfile());
+                    return new FirefoxDriver(new FirefoxBinary(BinaryPath), new FirefoxProfile(), TimeSpan.FromHours(2));
                 }
-                
+
             }
- 
+
         }
 
         private IWebDriver IEDriver
         {
             get
             {
-            	return new InternetExplorerDriver(Config.DriverServerPath);
+                return new InternetExplorerDriver(Config.DriverServerPath);
             }
 
         }
@@ -65,33 +68,51 @@ namespace WebDriverWrapper
             }
 
         }
-		
-        
 
-        #endregion Drivers 
+        private IWebDriver HTMLUnit
+        {
+            get
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo("java.exe", string.Format(@"-jar {0}\selenium-server-standalone-2.8.0.jar -port {1} -trustAllSSLCertificates", Config.NativeSeleniumDriver, Port));
+                //startInfo.FileName = Config.NativeSeleniumDriver;
+                startInfo.UseShellExecute = false;
+                startInfo.CreateNoWindow = false;
+                startInfo.RedirectStandardOutput = true;
+
+                //Start the process
+                NativeSeleniumProcess = Process.Start(startInfo);
+
+                //NativeSeleniumProcess = Process.Start(Config.NativeSeleniumDriver);
+
+                while (!IsConnected()) ;
+                return new RemoteWebDriver(new Uri(string.Format(@"http://127.0.0.1:{0}/wd/hub", Port)), DesiredCapabilities.HtmlUnit(), TimeSpan.FromHours(2));
+            }
+        }
+
+        #endregion Drivers
 
         #region Private Properties
 
-        private string BinaryPath { get; set; }
+        public string BinaryPath { get; set; }
 
         #endregion Private Properties
 
         #region Internal Properties
-        internal WebDriverBackedSelenium BackedSelenium 
-	        { 
-	        	get
-	        	{
-	        		WebDriverBackedSelenium aDriverBackedSelenium = new WebDriverBackedSelenium(BrowserHandle,Url);
-	        		aDriverBackedSelenium.Start();
-	        		return aDriverBackedSelenium;
-	        	}         
-	        }
-		
-		internal IWebDriver BrowserHandle;
+        internal WebDriverBackedSelenium BackedSelenium
+        {
+            get
+            {
+                WebDriverBackedSelenium aDriverBackedSelenium = new WebDriverBackedSelenium(BrowserHandle, Url);
+                aDriverBackedSelenium.Start();
+                return aDriverBackedSelenium;
+            }
+        }
+
+        internal IWebDriver BrowserHandle;
 
         internal BrowserType BrowserType;
-		        
-		#endregion Internal Properties        
+
+        #endregion Internal Properties
 
         #region ctor
 
@@ -100,9 +121,15 @@ namespace WebDriverWrapper
             GetBrowser(aBrowserType);
         }
 
-        public Browser(BrowserType aBrowserType, string binaryPath)            
+        public Browser(BrowserType aBrowserType, string binaryPath)
         {
             BinaryPath = binaryPath;
+            GetBrowser(aBrowserType);
+        }
+
+        public Browser(BrowserType aBrowserType, int port)
+        {
+            Port = port;
             GetBrowser(aBrowserType);
         }
 
@@ -110,7 +137,7 @@ namespace WebDriverWrapper
 
         #region Public Properties
 
-        public string Title 
+        public string Title
         {
             get
             {
@@ -119,22 +146,27 @@ namespace WebDriverWrapper
 
         }
 
-        public string Url 
+        public string Url
         {
             get
             {
                 return BrowserHandle.Url;
             }
-        }                                       
+        }
 
-        public string CurrentWindowHandle 
+        public string CurrentWindowHandle
         {
             get
             {
                 return BrowserHandle.CurrentWindowHandle;
-            }      
-           
+            }
+
         }
+
+
+
+        public Process NativeSeleniumProcess { get; private set; }
+        public int Port { get; private set; }
 
         #endregion Public Properties
 
@@ -142,15 +174,15 @@ namespace WebDriverWrapper
 
         public void GetBrowser(BrowserType aBrowserType)
         {
-//            ConfigureJava();
-//            
-//            Environment.SetEnvironmentVariable("JAVA_HOME",@"C:\Program Files\Java\jre7");
-//            Environment.SetEnvironmentVariable("JAVA",@"%JAVA_HOME%\bin\java.exe");
-//            Environment.SetEnvironmentVariable("JAVA_OPTS",@"%JAVA_TOOL_OPTONS% %_JAVA_OPTIONS%");
-//            Environment.SetEnvironmentVariable("JAVA_TOOL_OPTIONS",null);
-//            Environment.SetEnvironmentVariable("_JAVA_OPTIONS",null);
-            
-        	BrowserType = aBrowserType;
+            //            ConfigureJava();
+            //            
+            //            Environment.SetEnvironmentVariable("JAVA_HOME",@"C:\Program Files\Java\jre7");
+            //            Environment.SetEnvironmentVariable("JAVA",@"%JAVA_HOME%\bin\java.exe");
+            //            Environment.SetEnvironmentVariable("JAVA_OPTS",@"%JAVA_TOOL_OPTONS% %_JAVA_OPTIONS%");
+            //            Environment.SetEnvironmentVariable("JAVA_TOOL_OPTIONS",null);
+            //            Environment.SetEnvironmentVariable("_JAVA_OPTIONS",null);
+
+            BrowserType = aBrowserType;
 
             if (aBrowserType == BrowserType.Firefox)
             {
@@ -165,7 +197,12 @@ namespace WebDriverWrapper
             if (aBrowserType == BrowserType.Chrome)
             {
                 BrowserHandle = ChromeDriver;
-            }            
+            }
+
+            if (aBrowserType == BrowserType.HTMLUnit)
+            {
+                BrowserHandle = HTMLUnit;
+            }
         }
 
         public void SwitchBrowser(string BrowserTitle)
@@ -187,7 +224,27 @@ namespace WebDriverWrapper
 
         public void Navigate(string Url)
         {
-            BrowserHandle.Navigate().GoToUrl(Url);            
+            BrowserHandle.Navigate().GoToUrl(Url);
+        }
+
+        public void SwitchToFrame(int FrameIndex)
+        {
+            BrowserHandle.SwitchTo().Frame(FrameIndex);
+        }
+
+        //public void SwitchToFrame(IWebElement WebElement)
+        //{
+        //    BrowserHandle.SwitchTo().Frame(WebElement);
+        //}
+
+        public void SwitchToFrame(string FrameName)
+        {
+            BrowserHandle.SwitchTo().Frame(FrameName);
+        }
+
+        public void SwitchToDefaultContent()
+        {
+            BrowserHandle.SwitchTo().DefaultContent();
         }
 
         public void Maximize()
@@ -234,17 +291,35 @@ namespace WebDriverWrapper
         public void Quit()
         {
             BrowserHandle.Quit();
-        }      
-        
+            BrowserHandle.Dispose();
+        }
+
         public void WaitForPageLoaded(int Timeout)
         {
             WebDriverBackedSelenium aDriverBackedSelenium = new WebDriverBackedSelenium(BrowserHandle, Url);
 
             aDriverBackedSelenium.Start();
-            aDriverBackedSelenium.WaitForPageToLoad(Timeout.ToString(CultureInfo.InvariantCulture));            
+            aDriverBackedSelenium.WaitForPageToLoad(Timeout.ToString(CultureInfo.InvariantCulture));
         }
 
         #endregion Public  Methods
+
+        private bool IsConnected()
+        {
+            TcpClient client = new TcpClient();
+            Console.WriteLine("Connecting.....");
+            try
+            {
+                client.Connect("127.0.0.1", Port);
+                Console.WriteLine("True");
+                return true;
+            }
+            catch
+            {
+                Console.WriteLine("False");
+                return false;
+            }
+        }
 
         private IntPtr WinGetHandle(string wName)
         {
@@ -260,20 +335,20 @@ namespace WebDriverWrapper
 
             return hWnd;
         }
-        
+
         private void ConfigureJava()
         {
-        	//Process.Start(Config.IEDriverServerPath + "java.bat");
-        	
-        	Process p = new Process();
+            //Process.Start(Config.IEDriverServerPath + "java.bat");
 
-			p.StartInfo.FileName = "cmd.exe";
-			
-			p.StartInfo.Arguments = @"/C " + Config.DriverServerPath + @"\java.bat";
-			
-			p.Start();
-			
-			p.WaitForExit();
+            Process p = new Process();
+
+            p.StartInfo.FileName = "cmd.exe";
+
+            p.StartInfo.Arguments = @"/C " + Config.DriverServerPath + @"\java.bat";
+
+            p.Start();
+
+            p.WaitForExit();
 
         }
     }
