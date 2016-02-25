@@ -15,6 +15,8 @@ namespace WebDriverWrapper
 
         Rectangle BoundingRectangle { get; }
 
+        Image GetControlImage { get; }
+
         bool Visible { get; }
 
         string Text { get; }
@@ -33,12 +35,32 @@ namespace WebDriverWrapper
 
         void Click();
 
+        void Submit();
+
+        void SendKeys(string text);
+
         void DesktopMouseClick();
 
         void DesktopMouseClick(int offsetX, int offsetY);
 
+        void DesktopMouseDrag(int offsetX, int offsetY);
+
         string GetAttributeFromNode(string Attribute);
 
         object ExecuteJavaScript(Browser aBrowser, string JavaScript);
+
+        object InjectJSInBrowser(Browser aBrowser, string JavaScript);
+
+        bool HasChildren();
+
+        bool HasChildrenWithXpath(string xpath);
+
+        List<IControl> WaitForChildren(int maxTimeout);
+
+        List<IControl> WaitForChildren(string xpath, int maxTimeout);
+
+        string InnerHtml(Browser aBrowser);
+
+        string OuterHtml(Browser aBrowser);
     }
 }

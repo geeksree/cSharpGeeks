@@ -20,6 +20,10 @@ namespace WebDriverWrapper
         private const int MOUSEEVENTF_LEFTUP = 0x04;
         private const int MOUSEEVENTF_RIGHTDOWN = 0x08;
         private const int MOUSEEVENTF_RIGHTUP = 0x10;
+        private const int MIDDLEDOWN = 0x00000020;
+        private const int MIDDLEUP = 0x00000040;
+        private const int MOVE = 0x00000001;
+        private const int ABSOLUTE = 0x00008000;
 
         private static void MouseClick(int x, int y)
         {
@@ -28,6 +32,15 @@ namespace WebDriverWrapper
             SetCursorPos(x, y);
             mouse_event(MOUSEEVENTF_LEFTDOWN, x, y, 0, 0);
             mouse_event(MOUSEEVENTF_LEFTUP, x, y, 0, 0);
+        }
+
+        private static void MouseDrag(int startX, int startY, int endX, int endY)
+        {
+            SetCursorPos(startX, startX);
+            mouse_event(MOUSEEVENTF_LEFTDOWN, startX, startY, 0, 0);
+            mouse_event(ABSOLUTE, endX, endX, 0, 0);
+            //SetCursorPos(endX, endX);
+            mouse_event(MOUSEEVENTF_LEFTUP, endX, endY, 0, 0);
         }
 
 
@@ -40,15 +53,20 @@ namespace WebDriverWrapper
 
             //control.OwnerBrowser.Manager.Desktop.Mouse.HoverOver(new Point(x, y));
             //control.OwnerBrowser.Manager.Desktop.Mouse.Click(MouseClickType.LeftClick, new Point(x, y));
-                                   
+
             MouseClick(control.ClickablePoint.X, control.ClickablePoint.Y);
-                                   
+
             //MouseClick((int)x, (int)y);
         }
 
         internal static void DeskTopMouseClick(SeleniumWebControls control, int offsetX, int offsetY)
         {
             MouseClick(control.ClickablePoint.X + offsetX, control.ClickablePoint.Y + offsetY);
+        }
+
+        internal static void DeskTopMouseDrag(SeleniumWebControls control, int offsetX, int offsetY)
+        {
+            MouseDrag(control.ClickablePoint.X, control.ClickablePoint.Y, control.ClickablePoint.X + offsetX, control.ClickablePoint.Y + offsetY);
         }
     }
 }

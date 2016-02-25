@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using WebDriverWrapper;
 
@@ -65,6 +66,14 @@ namespace UIAccess.WebControls
             get { return Control.BoundingRectangle; }
         }
 
+        public Image GetScreenImage
+        {
+            get
+            {
+                return Control.GetControlImage;
+            }
+        }
+
         public Point ClickablePoint
         {
             get { return Control.ClickablePoint; }
@@ -79,6 +88,22 @@ namespace UIAccess.WebControls
         public string Text
         {
             get { return Control.Text; }
+        }
+
+        public string InnerHtml
+        {
+            get
+            {
+                return Control.InnerHtml(myControlAccess.Browser);
+            }
+        }
+
+        public string OuterHtml
+        {
+            get
+            {
+                return Control.OuterHtml(myControlAccess.Browser);
+            }
         }
 
         public bool IsChecked
@@ -153,8 +178,20 @@ namespace UIAccess.WebControls
 
         public void Click()
         {
+            Control.ExecuteJavaScript(myControlAccess.Browser, "arguments[0].hidden = false");
             Control.Click();
         }
+
+        public void Submit()
+        {
+            Control.Submit();
+        }
+
+        public void SendKeys(string keys)
+        {
+            Control.SendKeys(keys);
+        }
+
 
         public void DesktopMouseClick()
         {
@@ -164,6 +201,11 @@ namespace UIAccess.WebControls
         public void DesktopMouseClick(int offsetX, int offsetY)
         {
             Control.DesktopMouseClick(offsetX, offsetY);
+        }
+
+        public void DesktopMouseDrag(int offsetX, int offsetY)
+        {
+            Control.DesktopMouseDrag(offsetX, offsetY);
         }
 
         public string GetAttribute(string AttributeName)
@@ -180,6 +222,37 @@ namespace UIAccess.WebControls
         {
             return Control.ExecuteJavaScript(myControlAccess.Browser, JavaScript);
         }
+
+        public object InjectJSInBrowser(string JavaScript)
+        {
+            return Control.InjectJSInBrowser(myControlAccess.Browser, JavaScript);
+        }
+
+        public bool HasChildren()
+        {
+            return Control.HasChildren();
+        }
+
+        public bool HasChildrenWithXpath(string xpath)
+        {
+            return Control.HasChildrenWithXpath(xpath);
+        }
+
+        public List<WebControl> WaitForChildren(int maxTimeout)
+        {
+            List<IControl> aIControlList = new List<IControl>();
+            aIControlList = Control.WaitForChildren(maxTimeout);
+            return Utility.GetWebControlsFromIControlList(aIControlList, myControlAccess.Browser, new Locator(".//*", LocatorType.Xpath), ControlType.Custom);
+        }
+
+        public List<WebControl> WaitForChildren(string xpath, int maxTimeout)
+        {
+            List<IControl> aIControlList = new List<IControl>();
+            aIControlList = Control.WaitForChildren(xpath, maxTimeout);
+            return Utility.GetWebControlsFromIControlList(aIControlList, myControlAccess.Browser, new Locator(xpath, LocatorType.Xpath), ControlType.Custom);
+        }
+
+
         //public WebControl Parent 
         //{ 
         //    get

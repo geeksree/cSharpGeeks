@@ -250,6 +250,38 @@ namespace WebDriverWrapper
 
             return aControl;
         }
-        
+
+        internal static By GetByFromLocator(LocatorType locatorType, string locator)
+        {
+            switch (locatorType)
+            {
+                case LocatorType.ClassName:
+                    return By.ClassName(locator);
+
+                case LocatorType.Css:
+                    return By.CssSelector(locator);
+
+                case LocatorType.Id:
+                    return By.Id(locator);
+
+                case LocatorType.LinkText:
+                    return By.LinkText(locator);
+
+                case LocatorType.Name:
+                    return By.Name(locator);
+
+                case LocatorType.PartialLinkText:
+                    return By.PartialLinkText(locator);
+
+                case LocatorType.TagName:
+                    return By.TagName(locator);
+
+                case LocatorType.Xpath:
+                    return By.XPath(locator);
+
+                default:
+                    return By.XPath(locator);
+            }
+        }
     }
 }
