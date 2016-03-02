@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoItX3.Assembly">
+      <HintPath>..\Resources\AutoItX\AutoItX3.Assembly.dll</HintPath>
+    </Reference>
     <Reference Include="CodeScales.Http">
       <HintPath>..\packages\CodeScales\CodeScales.Http.dll</HintPath>
     </Reference>
@@ -87,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\TestCategory.cs" />
+    <Compile Include="AutoITExtension\AutoITExtension.cs" />
     <Compile Include="BaseSetings.cs" />
     <Compile Include="DataAccess.cs" />
     <Compile Include="ExcelReader.cs" />
@@ -103,6 +107,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutoItX3.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
