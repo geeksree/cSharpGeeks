@@ -22,9 +22,13 @@ namespace UIAccess.WebControls
             }
         }
 
-        public void SendKeys(string Text)
+        /// <summary>
+        /// Works only for Id, Name, ClassName and TagName , for any other locator type default Id is used
+        /// </summary>
+        /// <param name="Text"></param>
+        public void JSSendKeys(string Text)
         {
-            EditBox.SendKeys(Text);
+            EditBox.JSSendKeys(Text);            
         }
 
         public void Clear()

@@ -198,6 +198,11 @@ namespace UIAccess.WebControls
             Control.DesktopMouseClick();
         }
 
+        public void JSClick()
+        {
+            Executejavascript("arguments[0].click();");
+        }
+
         public void DesktopMouseClick(int offsetX, int offsetY)
         {
             Control.DesktopMouseClick(offsetX, offsetY);

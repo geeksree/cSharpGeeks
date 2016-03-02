@@ -8,7 +8,7 @@ namespace WebDriverWrapper.IControlHierarchy
 {
     public interface IEditBox : IControl
     {
-        void SendKeys(string aText);
+        void JSSendKeys(string aText);
         void Clear();
     }
 }
