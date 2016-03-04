@@ -257,6 +257,52 @@ namespace AuScGen.CommonUtilityPlugin
             }
         }
 
+        public void ExecuteCommand<TCommand>(Action<TCommand> command) where TCommand : DbCommand
+        {
+            try
+            {
+                CreateDataAdapter();
+
+                TCommand cmd = GetCommand<TCommand>();
+                command(cmd);
+                cmd.ExecuteNonQuery();
+                //switch (DataCategory)
+                //{
+                //    case DataCategory.SQLDB:
+                //        using (Connection)
+                //        {
+                //            TCommand cmd = GetCommand<TCommand>();
+                //            command(cmd);
+                //            cmd.ExecuteNonQuery();
+                //        }
+
+                //        break;
+
+                //    case DataCategory.MSExcel:
+                //        using (Connection)
+                //        {
+                //            OleDbCommand cmd = GetCommand<OleDbCommand>();
+                //            command(cmd);
+                //            cmd.ExecuteNonQuery();
+                //        }
+
+                //        break;
+                //}
+            }
+            catch (DataException e)
+            {
+                throw new DataBaseException("Exception occured while updating the data.", e);
+            }
+            finally
+            {
+                connection.Close();
+                connection = null;
+                command = null;
+                adapter = null;
+            }
+        }
+
+
         public List<T> GetData<T>(Action<DbCommand> command)
         {
             List<T> data = null;
