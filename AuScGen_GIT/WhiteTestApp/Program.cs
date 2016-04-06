@@ -59,22 +59,22 @@ namespace WhiteTestApp
         public void InvokeTest()
         {
             White.GuiMapPath = GuiMapPath + "GuiMap.xml";
-            
-            //White.Button("Button9").Click();
 
-            //White.Button("AddButton").Click();
+            White.Button("Button9").Click();
 
-            //White.Button("Button7").Click();
+            White.Button("AddButton").Click();
+
+            White.Button("Button7").Click();
 
             //White.Button("EqualButton").Click();
                         
             //Console.WriteLine(White.Label("ResultField").Text);
 
             
-            List<AuScGen.WhiteFramework.TabPage> test = White.Tab("ControlsTab").Pages();
-            test[3].Select();
+            //List<AuScGen.WhiteFramework.TabPage> test = White.Tab("ControlsTab").Pages();
+            //test[3].Select();
 
-            List<BaseControl> test2 = test.FirstOrDefault().Children.FirstOrDefault().Children.FirstOrDefault().Children;
+            //List<BaseControl> test2 = test.FirstOrDefault().Children.FirstOrDefault().Children.FirstOrDefault().Children;
 
             //List<AutomationElement> test3 = GetChildren(test2.FirstOrDefault());
 

@@ -24,7 +24,9 @@ namespace GoogleTestWithWebDriver
             ////Locator cal = calender.CalenderHeaderLocator;
             //Console.Write(calender.GetMonthAndYear.Text);
 
-            SampleEDMC();
+            //SampleEDMC();
+
+            SampleBrowseTest();
             
         }
 

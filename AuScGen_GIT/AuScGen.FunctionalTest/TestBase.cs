@@ -60,7 +60,7 @@ namespace AuScGen.FunctionalTest
                 if (null == aWebDriver)
                 {
                     aWebDriver = CreatePlugin<WebDriverPlugin>();
-                    aWebDriver.Browser = new WebDriverWrapper.Browser(WebDriverWrapper.BrowserType.Chrome);
+                    aWebDriver.Browser = new WebDriverWrapper.Browser(WebDriverWrapper.BrowserType.IE);
                 }
                 return aWebDriver;
             }

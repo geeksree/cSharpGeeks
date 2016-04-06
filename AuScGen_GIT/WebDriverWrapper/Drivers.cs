@@ -73,7 +73,10 @@ namespace WebDriverWrapper
         {
             get
             {
-                return new InternetExplorerDriver(Config.DriverServerPath);
+                InternetExplorerOptions options = new InternetExplorerOptions();
+                options.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
+                options.IgnoreZoomLevel = true;
+                return new InternetExplorerDriver(Config.DriverServerPath,options);
             }
 
         }
