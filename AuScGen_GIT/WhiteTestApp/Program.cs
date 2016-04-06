@@ -35,8 +35,8 @@ namespace WhiteTestApp
                 if (null == white)
                 {
                     white = Container.GetPlugin<WhitePlugin>();
-                    white.ProcessName = "WindowsFormsTestApplication";
-                    white.AppWindowName = "MainWindow";
+                    white.ProcessName = "calc";
+                    white.AppWindowName = "Calculator";
 
                     //white.ProcessName = "WinFormsTestApp";
                     //white.AppWindowName = "Form1";
